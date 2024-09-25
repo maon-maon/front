@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t11.html(pseudo선택자(:))</title>
+  <style>
+    h2:hover{
+      background-color: gray;
+    }
+    /* a:link { a걸린 링크태그만 적용 */
+    :link { /*링크태그 전부 적용*/
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bolder;
+    }
+    :visited { /*방문하고 왔을 때*/
+      color: green;
+    }
+    a:focus { /*초점이 갔을 때:tap키로 선택했을 떄*/
+      background-color: #000;
+      color: #fff;
+    }
+    a:active{
+      color: red;
+    }
+    input, button { /*여러개 지정시 , 사용*/
+      background-color: gold;
+    }    
+    [type="text"], [type="password"]{
+      color: violet;
+    }
+  </style>
+</head>
+<body>
+  <h2>Pseudo-Class Selector</h2>
+  <p>
+    <a href="">어디로 갈까요</a>
+  </p>
+  <form action="">
+    성명 : <input type="text" name="name"><br/>
+    비번 : <input type="password" name="pwd"><br/>
+    <button>전송</button>
+  </form>
+</body>
+</html>

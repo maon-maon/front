@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t20.html(레이어)</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    .item {
+      width: 200px;
+      height: 180px;
+      margin: 10px 0px;
+    }
+    #item1 {
+      background-color: aqua;
+    }
+    #item2 {
+      background-color: beige;
+      position: absolute;
+      left: 150px;
+      top: 150px;
+      z-index: 6;
+    }
+    #item3 {
+      background-color: cadetblue;
+      position: absolute;
+      left: 250px;
+      top: 250px;
+      z-index: 5;
+    }
+    #item4 {
+      background-color: darkblue;
+      width: 250;
+      display: auto;
+      position: fixed;
+      left: 300px;
+      top: 100px;
+    }
+    #item5 {
+      background-color: firebrick;
+    }
+    #item6 {
+      background-color: gainsboro;
+      position: relative; /* 바로 전에 작업이 끝난부분에서부터 100이 움직임*/
+      left: 100px;
+      top: 100px
+    }
+    #item7, #item9, #item11 {
+      background-color: honeydew;
+    }
+    #item8, #item10, #item12 {
+      background-color: indianred;
+    }
+    #top_arrow {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2><a  name="top">레이어 연습하기</a></h2>
+  <div class="item" id="item1">1</div>
+  <div class="item" id="item2"><a href="https://www.naver.com">2</a></div>
+  <div class="item" id="item3"><a href="t19.html"></a>3</div>
+  <div class="item" id="item4"><img src="../images/244.png" width="250">4</div>
+  <div class="item" id="item5">5</div>
+  <div class="item" id="item6">6</div>
+  <div class="item" id="item7">7</div>
+  <div class="item" id="item8">8</div>
+  <div class="item" id="item9">9</div>
+  <div class="item" id="item10">10</div>
+  <div class="item" id="item11">11</div>
+  <div class="item" id="item12">12</div>
+  <a href="#top"><img src="../images/253.jpg" id="top_arrow" width="50px" height="50px"/></a>
+</body>
+</html>

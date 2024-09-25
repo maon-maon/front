@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t06.html(클래스, 자손선택자)</title>
+  <link type="text/css" rel="stylesheet" href="t03.css">
+  <style>
+    p {font-size: 10pt;}
+    div {font-size: 3pt;}
+    h1 {font-size: 25pt;}
+    /* p {font-size: 30pt;} */ /*p태그가 동일한 속성이 나오면 마지막게 적용됨*/
+    h4 {
+      color: rgb(255, 0, 0); 
+      font-size: 20pt;
+    }
+    /* p#f25{font-size: 35px;} */ /*p는 생력가능*/
+    #f25{
+      font-size: 35px;
+      color: red;
+    }
+    p {color: green;}
+    /* .f20{font-size: 40px;} */ /*p태그가 붙은 */
+    p.f20{font-size: 20px;}
+    div p.f20{
+      font-size: 20; 
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+  <h2>css 연습</h2>
+  <hr/>
+  <p><font size="1">p태그 연습1</font></p>
+  <p>p태그 연습2</p>
+  <p id="f25">p태그 연습3</p> <!-- 스타일에서 #f25로 지정한 내용이 바뀜-->
+  <p>p태그 연습4</p>
+  <p class="f20">p태그 연습5</p> <!--동일한 아이디를 쓰고 싶을 떄 클래스를 붙임 p.f20만 바꿈-->
+  <p>p태그 연습6</p>
+  <p class="f20">p태그 연습7</p>
+  <div>div태그 연습1</div>
+  <div>div태그 연습2</div>
+  <div>div태그 연습3</div>
+  <h1 style="font-size: 300;">제목 1</h1>
+  <h4 >제목 4</h4>
+  <h4 class="f20">제목 4</h4>
+  <div>
+    <p class="f20">안녕1</p>
+    <p>안녕2</p>
+    <p class="f20">안녕3</p>
+  </div>
+</body>
+</html>

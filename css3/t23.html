@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t23.html</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+
+  <style>
+    div {
+      line-height: 20px; /*줄과 줄사이의 간격*/
+    }    
+    div.mbc {
+      font-family: "굴룸체", "궁서체","돋움체"; /*윈도우제공만*/
+      border: 5px solid green;
+      text-indent: 50px;
+    }
+    div.kbs {
+      font-family: "Nanum Brush Script", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    div#sbs {
+      border: 2px double red;
+      width: 400px;
+      text-indent: 40px;
+      letter-spacing: 4px;
+      word-spacing: 20px; /*스페이스마다 20씩 띄움*/
+    }
+    .f25 {
+      font-size: 20px; /*값이 고정되서 반응형에 조절되지 않음*/
+      color: blue;
+    } /* 1em=16px */
+    .e40 {
+      font-size: 1.25em; /*반응형에서 많이 사용함*/
+      color: red;
+    } /* 1em=16px */
+    h1 {
+      font-variant: small-caps; /*소문자크기 그대로 대문자로 전환*/
+    }
+    #kor {
+      text-shadow: 3px 3px 4px #444;
+    }
+  </style>
+</head>
+<body>
+  <h2>애국가</h2>
+  <pre>
+    <div class="mbc">
+      1절
+      <span class="e40">동해 물</span>과 <span class="f25">백두산</span>이 마르고 닳도록
+      하느님이 보우하사 우리나라 만세
+      무궁화 <span class="f25">삼천리</span> 화려 강산
+      대한 사람 대한으로 길이 보전하세
+    </div>
+    <div class="kbs">
+      2절
+      <span class="e40">남산</span> 위에 저 <span class="f25">소나무</span> 철갑을 두른 듯
+      바람 서리 불변함은 우리 기상일세
+      <span class="f25">무궁화</span> 삼천리 화려 강산
+      대한 사람 대한으로 길이 보전하세
+    </div>
+    <div class="mbc">
+      3절
+      가을 하늘 공활한데 높고 구름 없이
+      밝은 달은 우리 가슴 일편단심일세
+      무궁화 삼천리 화려 강산
+      대한 사람 대한으로 길이 보전하세
+    </div>
+    <div class="kbs">
+      4절
+      이 기상과 이 맘으로 충성을 다하여
+      괴로우나 즐거우나 나라 사랑하세
+      무궁화 삼천리 화려 강산
+      대한 사람 대한으로 길이 보전하세
+    </div>
+  </pre>
+  <h1>Wellcome To Korea!!</h1>
+  <h1 id="kor">한국에 오신것을 환영합니다!!</h1>
+  <div id="sbs">
+    4절
+    이 기상과 이 맘으로 충성을 다하여
+    괴로우나 즐거우나 나라 사랑하세
+    무궁화 삼천리 화려 강산
+    대한 사람 대한으로 길이 보전하세
+  </div>
+</body>
+</html>

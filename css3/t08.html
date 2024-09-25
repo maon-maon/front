@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t07.html(자식선택자)</title>  <!-- 클래스나 아이디가 제일 편함-->>
+  <style>
+    li{ 
+      background-color: darkgoldenrod;
+    }
+    header nav ul ol li{  
+      background-color: darkcyan;
+    }
+    header > nav > ol > ul > li{   /*딱 지정된 애만 나옴*/
+      background-color: darkcyan;
+    }
+    dd {
+      color: beige;
+      background: blueviolet;
+    }
+    /* #cat > dd { >는 자식으로 봐서 적용 안 됨. 자식은 바로 밑만 지정
+      color: beige;
+      background: blue;
+    } */
+    /* #cat > dl>dd { 자식으로 쓸거면 경로 자세리 써줘야함
+      color: beige;
+      background: blue;
+    } */
+    #cat dd { /*그냥 이렇게 씀. 이게 맞는 방식임*/
+      color: beige;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <h2>자손선택자</h2>
+  <hr/>
+  <header>
+    <nav>
+      <ul>
+        <li>sub1</li>
+        <li>sub2
+          <ol>
+            <li>subsub1</li>
+            <li>subsub2</li>
+            <li>subsub3</li>
+          </ol>
+        </li>
+        <li>sub3</li>
+        <li>sub4</li>
+      </ul>
+      <ol>
+        <li>sub11</li>
+        <li>sub12</li>
+        <ul>
+          <li>subsub1</li>
+          <li>subsub2</li>
+          <li>subsub3</li>
+        </ul>
+        <li>sub13</li>
+        <li>sub14</li>
+      </ol>
+    </nav>
+    <p>1.이곳은 p태그입니다.</p>
+    <p><span>2.이곳은 p태그입니다.</span></p>
+    <p>3.이곳은 p태그입니다.</p>
+    <p>4.이곳은 p태그입니다.</p>
+  </header>
+  <section>
+    <article id="dog">
+      <h2>강아지에 관하여</h2>
+      <dl>
+        <dt>강아지 종료</dt>
+        <dd>독일셰퍼트</dd>
+        <dd>시베리안허스키</dd>
+        <dd>골든리트리버</dd>
+        <dd>닥스훈트</dd>
+        <dd>포메라니안</dd>
+      </dl>
+    </article>
+    <article id="cat">
+      <h2>고양이에 관하여</h2>
+      <dl>
+        <dt>고양이 종료</dt>
+        <dd>페르시아고양이</dd>
+        <dd>메인쿤</dd>
+        <dd>브리티시숏헤어</dd>
+        <dd>스핑크스고양이</dd>
+        <dd>먼치킨고양이</dd>
+      </dl>
+    </article>
+  </section>
+</body>
+</html>
