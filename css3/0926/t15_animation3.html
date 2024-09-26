@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t15_animation3.html</title> <!--움직이는 애니메이션-->>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: rebeccapurple;
+      animation: logo;
+      animation-duration: 4s;
+      position: relative;
+    }
+
+    @keyframes logo {
+      0% {background-color: rebeccapurple; left: 0px; top: 0px;}
+      25% {background-color: yellow; left: 200px; top: 0px;}
+      50% {background-color: green; left: 200px; top: 200px;}
+      75% {background-color: tomato; left: 0px; top: 200px;}
+      100% {background-color: black; left: 0px; top: 0px;}
+    }
+  </style>
+</head>
+<body>
+  <h2>Animation Effect</h2>
+  <div></div>
+  제자리에서 색이 변화됩니다.
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t07.html</title>
+  <style>
+    h2 {
+      background-color: lawngreen;
+    }
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    .container {
+      margin: 0px auto;
+      width: 1000px;
+      height: 800px;
+    }
+    .row1 {
+      width: 1000px;
+      height: 200px;
+      background-color: rgb(178, 214, 247);
+      text-align: center;
+      padding: 5px;
+    }
+    .row2 {
+      float: left;
+      width: 1000px;
+      height: 600px;
+      background-color: rgb(59, 97, 131);
+    }
+    .row2 .r2col1 {
+      float: left;
+      width: 200px;
+      height: 600px;
+      background-color: rgb(176, 248, 169);
+    }
+    .row2 .r2col2 {
+      float: left;
+      width: 600px;
+      height: 600px;
+      background-color: rgb(102, 119, 100);
+    }
+    
+    .row2 .r2col2 .r2col2t1d1 {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(45deg, rgb(0, 255, 213), rgb(132, 0, 255) );
+    }    
+    .row2 .r2col2 .r2col2t1d2 {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(90deg, rgb(0, 255, 213), rgb(132, 0, 255) );
+    }    
+    .row2 .r2col2 .r2col2t2d1 {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, rgb(0, 255, 213), rgb(132, 0, 255) );
+    }    
+    .row2 .r2col2 .r2col2t2d2 {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, rgb(132, 0, 255) ,rgb(0, 255, 213) );
+    }    
+    .row2 .r2col3 {
+      float: left;
+      width: 200px;
+      height: 600px;
+      background-color: rgb(4, 46, 0);
+    }
+    .row3 {
+      clear: both;
+      width: 1000px;
+      height: 200px;
+      background-color: rgb(0, 136, 255);
+    }
+  </style>
+</head>
+<body>
+  <h2 class="hpage">홈페이지</h2>
+  <hr/>
+  <div class="container">
+    <div class="row1"><img src="../../../front_stu/hWork/h240924/img/4.png" height="150" width="800" ></div>
+    <div class="row2">
+      <div class="r2col1"><input type="text"></div>
+      <div class="r2col2">
+        <div class="table">
+          <div class="tr1">
+            <div class="r2col2t1d1">2행2열1</div>
+            <div class="r2col2t1d2">2행2열2</div>
+          </div>
+          <div class="tr2">
+            <div class="r2col2t2d1">2행2열3</div>
+            <div class="r2col2t2d2">2행2열4</div>
+          </div>
+        </div>
+      </div>
+      <div class="r2col3">2_3열</div>
+        <div>
+          <div>
+            <div></div>
+            <div>ad2</div>
+            <div>ad3</div>
+            <div>ad4</div>
+            <div>ad5</div>
+          </div>
+        </div>
+    </div>
+    <div class="row3">3행</div>
+  </div>
+</body>
+</html>

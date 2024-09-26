@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t15_animation4.html</title> <!--움직이는 애니메이션-->>
+  <style>
+    div {
+      width: 100px;
+      height: 50px;
+      background-color: rebeccapurple;
+      position: relative;
+      animation: horse 5s;
+      animation-fill-mode: forwards;
+    }
+
+    #horse1 {animation-timing-function: linear;}
+    #horse2 {animation-timing-function: ease;}
+    #horse3 {animation-timing-function: ease-in;}
+    #horse4 {animation-timing-function: ease-out;}
+    #horse5 {animation-timing-function: ease-in-out;}
+
+    @keyframes horse {
+      from {left: 0px;}
+      to {left: 300px;}
+    }
+  </style>
+</head>
+<body>
+  <h2>Animation Effect</h2>
+  <div id="horse1">horse1 : linear</div>
+  <div id="horse2">horse2 : ease</div>
+  <div id="horse3">horse3 : ease-in</div>
+  <div id="horse4">horse4 : ease-out</div>
+  <div id="horse5">horse5 : ease-in-out</div>
+  말이 달려갑니다.
+</body>
+</html>

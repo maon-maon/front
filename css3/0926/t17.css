@@ -1,0 +1,54 @@
+/* t17.css */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0.8em;
+}
+
+.container {
+  background-color: #eee;
+  height: 100vh; /*높이 전체를 사용*/
+  display: flex;
+
+  /* flex-direction: row;기본(행기준) */
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-self: flex-start;
+  /* justify-self: flex-end; */
+  /* justify-content: center; */
+
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+
+  /* align-items: baseline; */
+  /* align-items: center; */
+  /* align-items:  end; */
+}
+
+.item {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.item2 {
+  width: 150px;
+  height: 150px;
+}
+
+.item1 { background-color: saddlebrown;}
+.item2 { background-color: salmon;}
+.item3 { background-color: sandybrown;}
+.item4 { background-color: seagreen;}
+.item5 { background-color: seashell;}
+.item6 { background-color: sienna;}
+.item7 { background-color: silver;}
+.item8 { background-color: skyblue;}
+.item9 { background-color: slateblue;}
+.item10 { background-color: springgreen;}
