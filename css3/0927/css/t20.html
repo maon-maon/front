@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t20_mediaquery.html</title>
+  <!--pc기준 공통설계-->>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    .container {
+      width: 1000px;
+      margin: 0 auto; /*자동 가운데 정렬*/
+      font-size: 1.5em;
+      background-color: #eee;
+      border: 2px, solid gray;
+    }    
+    /* #area { */
+    div#area {
+      width: 960px;
+      height: 350px;
+      margin: 0px auto;
+      background-color: blueviolet;
+    }
+    #tbl {
+      width: 960px;
+      height: 450px;
+      margin: 0px auto;
+      background-color: aliceblue;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #bbb;
+      text-align: center;
+    }
+    div#img { text-align: center;}
+    div#img img {
+      width: 1000px;
+      text-align: center;
+      /* overflow: auto; */
+    }
+    /* 미디어 쿼리 */
+    /* screen width >=1024px  (max-width < 1024px == max-width:1024px)*/ /*1024px 사용한다는 의미*/
+    @media screen and (max-width:1024px) {
+      .container {
+      width: 700px;
+      margin: 0 auto; /*자동 가운데 정렬*/
+      font-size: 1em;
+      background-color: #eee;
+      border: 1px, solid gray;
+      }    
+      /* #area { */
+      div#area {
+        width: 680px;
+        height: 400px;
+        margin: 0px auto;
+        background-color: chocolate;
+      }
+      #tbl {
+        width: 680px;
+        height: 250px;
+        margin: 0px auto;
+        background-color: aliceblue;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #bbb;
+        text-align: center;
+      } /*위에 적은것과 동일하니 지워도 됨*/      
+      div#img img{       
+        width: 680px;
+        text-align: center;
+      }
+    }
+    /* 모바일 크기 */
+    @media screen and (max-width:400px) {
+      .container {
+      width: 260px;
+      margin: 0 auto; /*자동 가운데 정렬*/
+      font-size: 0.7em;
+      background-color: #eee;
+      border: 1px, solid gray;
+      }
+      div#area {
+        width: 260px;
+        height: 100px;
+        margin: 0px auto;
+        background-color: darkmagenta;
+      }
+      #tbl {
+        width: 260px;
+        height: 120px;
+        margin: 0px auto;
+        background-color: aliceblue;
+        border-collapse: collapse;
+      }         
+      div#img img{       
+        width: 680px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>미디어쿼리 연습(52번)</h2>
+  <p>(반응형 웹 사이트 : Responsive Web Design)</p>
+  <hr/>
+  <ul>
+    <li>데스트탑 : 1024px(1200px) 이상</li>
+    <li>태블릿 : 780px(992px)~데스크탑</li>
+    <li>모바일  : 768px이하(576px)</li>
+  </ul>
+  <hr/>
+  <div>이곳은 반응형 웹 사이트를 위한 화면입니다.</div>
+  <hr/>
+  <div id="area"></div>
+  <table id="tbl">
+    <tr>
+      <th>주제</th>
+      <th>강사</th>
+      <th>장소</th>
+    </tr>
+    <tr>
+      <td>웹표준에 대하여</td>
+      <td>홍길동</td>
+      <td>그린아카데미</td>
+    </tr>
+    <tr>
+      <td>Java 프로그래밍</td>
+      <td>김영민</td>
+      <td>그린 402호</td>
+    </tr>
+  </table>
+  <hr/>
+  <div id="img">
+    <img src="../../../images/251.jpg" />
+  </div>
+</div>  
+</body>
+</html>
