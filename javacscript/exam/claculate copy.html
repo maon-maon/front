@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t10_3.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function num7() { myform.su1 += 7; }
+    function num8() { myform.su1 += 8; }
+    function num9() { myform.su1 += 9; }
+    function numP() { myform.su1 += 'P'; }
+    function num4() { myform.su1 += 4; }
+    function num5() { myform.su1 += 5; }
+    function num6() { myform.su1 += 6; }
+    function numM() { myform.su1 += 'M'; }
+    function num1() { myform.su1 += 1; }
+    function num2() { myform.su1 += 2; }
+    function num3() { myform.su1 += 3; }
+    function numX() { myform.su1 += 'X'; }
+    function num0() { myform.su1 += 0; }
+    function numE() { myform.su1 += 'E'; }
+    function numD() { myform.su1 += 'D'; }
+    function numC() { myform.su1 += 'C'; }
+
+
+    function fCheck() {
+      su1 = myform.su1.value;
+      
+      if(su1 == "") {
+        alert('수식을 입력하세요.');
+        myform.su1.focus();
+      }
+      
+      else {
+        result = eval(su1);
+        myform.res.value = result;       
+      }
+
+    }
+  </script>
+  <style>
+    .tblNum {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+    }
+    .tblNum {     
+      text-align: center;
+    }
+    .tblNum .num {
+      padding: 10px;
+      font-size: 2em;        
+    }
+
+  </style>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <h2>입력된 값의 출력</h2>
+  <form name="myform" action="#">
+    <p>수식 <input type="text" name="su1" class="form-control" required ></p>
+    <p>결과 <input type="text" name="res" class="form-control" readonly ></p>
+    <p> <input type="button" value="출력" onclick="fCheck()" class="btn btn-success"></p>
+    <div class="tblNum">
+      <div class="num num7"><input type="button" value="7" onclick="num7()" ></div>
+      <div class="num num8"><input type="button" value="8" onclick="num8()" ></div>
+      <div class="num num9"><input type="button" value="9" onclick="num9()" ></div>
+      <div class="num num+"><input type="button" value="+" onclick="numP()" ></div>
+      <div class="num num4"><input type="button" value="4" onclick="num4()" ></div>
+      <div class="num num5"><input type="button" value="5" onclick="num5()" ></div>
+      <div class="num num6"><input type="button" value="6" onclick="num6()" ></div>
+      <div class="num num-"><input type="button" value="-" onclick="numM()" ></div>
+      <div class="num num1"><input type="button" value="1" onclick="num1()" ></div>
+      <div class="num num2"><input type="button" value="2" onclick="num2()" ></div>
+      <div class="num num3"><input type="button" value="3" onclick="num3()" ></div>
+      <div class="num num*"><input type="button" value="*" onclick="numX()" ></div>
+      <div class="num num0"><input type="button" value="0" onclick="num0()" ></div>
+      <div class="num num="><input type="button" value="=" onclick="numE()" ></div>
+      <div class="num num/"><input type="button" value="/" onclick="numD()" ></div>
+      <div class="num numC"><input type="button" value="C" onclick="numC()" ></div>
+    </div>
+    
+  </form>
+</div>
+</body>
+</html>

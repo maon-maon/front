@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t02.html</title>
+  <!-- <script language="javascript" type="text.javascript"></script> -->
+  <script>
+    document.write("1.이곳은 자바스크립트 영역입니다.");
+    // 도큐먼트는 가작 마지막에 수행됨. 아래의 자바가 다 수행되고 나서 화면에 찍힘
+// 스크립트 영역내에서 출력이 가능. 자바와 비슷함.마지막에 ;을 찍어야 함
+    console.log("1.반갑습니다.(콘솔)");
+    console.log("2.반갑습니다.(콘솔)" + " 또 만나요");
+    console.log("3.반갑습니다.(콘솔)" + 123);
+    console.log(123+"4.반갑습니다.(콘솔)" + 456);  //타입 무시함 숫자와 문자가 붙음 
+    console.log(123,"5.반갑습니다.(콘솔)",456);
+    console.log(123,"6.반갑습니다.(콘솔)",10*20); 
+    //자바와 비슷한 기능 사용 가능하게 만듦. 자바 기능 다 가져옴
+    alert("안녕하세요.")
+    res = prompt("수치를 입력하세요")
+    console.log("입력한 값은 : ",res)
+    //자바 스윙 기능도 가져옴!
+    res = confirm("계속 할까요? (y/n)")
+    console.log("입력한 값은 : ",res)
+    
+  </script>
+</head>
+<body>
+  <h2>이곳은 body태그 안의 h2입니다.</h2>
+
+  <script>
+    document.write("2.이곳은 자바스크립트 영역입니다.");
+    // body와 상관없이 별도로 출력됨. 위에서부터 출력되는 순차적 프로그램
+  </script>   
+</body>
+</html>
