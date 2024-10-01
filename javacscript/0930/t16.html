@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t16.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+    let cnt = 0;
+
+    // calc1(); //익명함수(와arrow function)는 호이스팅이 되지 않기에 함수 선언후에 호출해야함
+
+    //일반함수
+    // function calc1() {}
+
+    //익명함수
+    // let calc1 = function() {  //함수이름을 변수명으로 줌. 익명함수 개념으로 호출
+    //   console.log(++cnt + ".익명함수 호출...(함수표현식)");
+    // } 
+
+    //익명함수를 Arrow Function으로 표현하기
+    // let calc1 = () => { 
+    //   console.log(++cnt + ".익명함수 호출...(함수표현식)");
+    // } 
+
+    let calc1 = () => console.log(++cnt + ".익명함수 호출a...(함수표현식)");
+    //명령을 수행한거지 리턴한게 아님
+    //한 줄로 쓸 떄는 return이 생략됨 값을 자동으로  브라우저에  값을 돌려보냄
+    //여기는 실행부consol을 리턴으로 consol안에 넣을 수 없음= 리턴으로 넣을 값이 없음=undefined
+
+
+    let calc2 = () => {
+      console.log(++cnt + ".익명함수 호출b...(함수표현식)"); 
+      return "calc2()익명함수...";
+    } //
+
+    // let calc3 = (su1, su2) => {
+    //   return su1+su2;
+    // }
+    let calc3 = (su1, su2) => su1 + su2;
+    //
+
+
+    console.log('calc1 : '+ calc1()); // 30번줄을 콘솔에 찍은거지 리턴값이 없으므로 undefined=리턴 없음 취급
+    console.log('calc2 : '+ calc2()); // 콘솔과 리턴 둘 다 찍음. 리턴은 여기서 명령은 위에서
+    console.log('calc3 : '+ calc3(10,20)); // 값(10,20)을 넘겨서 let calc3이 처리하고 리턴값 값을 'calc3 :에서 찍어줌
+
+    //함수호출
+    calc1(); //단순히 calc1()을 호출함 ".익명함수 호출a...(함수표현식)"가 콘솔에 찍힘
+
+  </script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <h2>Arrow Function</h2>
+  <p>
+    <div><input type="button" value="계산1" onclick="calc1()" class="btn btn-success mb-2"></div>
+    <div><input type="button" value="계산2" onclick="calc2()" class="btn btn-success mb-2"></div>
+    <div><input type="button" value="계산3" onclick="alert(calc3(5,25))" class="btn btn-success mb-2"></div>
+  </p>
+</div>
+</body>
+</html>
