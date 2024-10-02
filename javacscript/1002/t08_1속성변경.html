@@ -31,13 +31,14 @@
     }
     function textErase() {
       demoText.innerHTML = "";
+      
     }
+    
 
     // function textCopy() {
     //   let str = demoText.innerHTML;     
     //   demoText.innerHTML += '<br/>'+str;
     // }
-
     let sw =0;
     let str ='', temp;
     function textCopy() {
@@ -48,6 +49,12 @@
       str += temp + '<br/>';
       demoText.innerHTML = str;
     }
+
+      //글자복사의 메모리 제거안 됨. 페이지 새로고침이 최선
+    function textRefresh() {  
+      location.reload();
+    }
+
 
   </script>
 </head>
@@ -66,6 +73,7 @@
       <button type="button" onclick="textOut()" class="btn btn-primary">글자 출력</button>
       <button type="button" onclick="textErase()" class="btn btn-primary">글자 삭제</button>
       <button type="button" onclick="textCopy()" class="btn btn-primary">글자 복사</button>
+      <button type="button" onclick="textRefresh()" class="btn btn-primary">새로고침</button>
     </div>
     <div class="mb-2">
       <button type="button" onclick="document.getElementById('demoImg').style.display='none'" class="btn btn-info">그림 감추기</button>      

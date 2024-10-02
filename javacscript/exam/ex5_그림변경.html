@@ -33,10 +33,20 @@
       demoText.innerHTML = "";
     }
 
+    // function textCopy() {
+    //   let str = demoText.innerHTML;
+    //   // 선생님 미완성으로 넘김 1개만 복사되야함
+    //   demoText.innerHTML += '<br/>' + temp;
+    // }
+    let sw =0;
+    let str ='', temp;
     function textCopy() {
-      let str = demoText.innerHTML;
-      // 선생님 미완성으로 넘김 1개만 복사되야함
-      demoText.innerHTML += '<br/>' + temp;
+      if(sw == 0){
+        temp = demoText.innerHTML;
+        sw = 1;
+      }
+      str += temp + '<br/>';
+      demoText.innerHTML = str;
     }
 
     // function prtImg1() {}
@@ -58,6 +68,7 @@
       <button type="button" onclick="textOut()" class="btn btn-primary">글자 출력</button>
       <button type="button" onclick="textErase()" class="btn btn-primary">글자 삭제</button>
       <button type="button" onclick="textCopy()" class="btn btn-primary">글자 복사</button>
+      <button type="button" onclick="textCopy()" class="btn btn-primary">글자 복사</button>
     </div>
     <!-- <div class="mb-2">
       <button type="button" onclick="document.getElementById('demoImg').style.display='none'" class="btn btn-info">그림 감추기</button>      
@@ -69,7 +80,7 @@
         onmouseout="document.getElementById('demoImg2').innerHTML = '<img src=../../images/247.jpg width=200px>'" />        
     </div> --> <!-- innerHTML : 태그 사용시 명령어 -->
 
-    <!-- <div class="mb-2">
+    <div class="mb-2">
       <img src="../../images/247.jpg" width="60px" height="40px" 
         onclick="document.getElementById('demoImg2').innerHTML = '<img src=../../images/247.jpg width=200px>'" />
       <img src="../../images/248.jpg" width="60px" height="40px" 
@@ -80,12 +91,9 @@
         onmouseover="document.getElementById('demoImg2').innerHTML = '<img src=../../images/250.jpg width=200px>'" />
       <img src="../../images/251.jpg" width="60px" height="40px" 
         onmouseover="document.getElementById('demoImg2').innerHTML = '<img src=../../images/251.jpg width=200px>'" />        
-    </div> --> <!--onclick: 이미지 눌렀을 떄   / onmouseover:akdntm dhffuTdmf EO-->
+    </div> <!--onclick: 이미지 눌렀을 떄   / onmouseover:akdntm dhffuTdmf EO-->
     
-    <div class="mb-2">
-      <img src="../../images/247.jpg" width="60px" height="40px" 
-        onclick="" />
-   
+    
 
     <!-- 버튼을 누르면 이미지 나오도록 만드는중 -->
     <!-- <div>
