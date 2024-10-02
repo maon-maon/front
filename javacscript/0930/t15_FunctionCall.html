@@ -33,7 +33,7 @@
     let mbc = function() {
       let str = ++cnt+".안녕하세요!!!";
       console.log(str);
-    }
+    } //mbc라는 이름의 익명함수를 만들고 그 안에서 변수 str을 선언해서 콘솔로 출력시킴
 
     function calc3() {            
       console.log("mbc익명함수 호출 a :mbc : "+mbc);  //변수호출 //안녕하세요!!!
@@ -51,10 +51,10 @@
 <div class="container">
   <h2>변수의 선언을 이용한 익명함수</h2>
   <p>
-    <div><input type="button" value="계산1" onclick="calc1(50,100)" class="btn btn-success mb-2"></div>
-    <div><input type="button" value="계산2" onclick="calc2(50,100)" class="btn btn-success mb-2"></div>
-    <div><input type="button" value="계산3" onclick="calc3()" class="btn btn-success mb-2"></div>
-    <div><input type="button" value="계산4" onclick="mbc()" class="btn btn-success mb-2"></div>
+    <div><input type="button" value="계산1(일반함수)" onclick="calc1(50,100)" class="btn btn-success mb-2"></div>
+    <div><input type="button" value="계산2(함수-함수호출)" onclick="calc2(50,100)" class="btn btn-success mb-2"></div>
+    <div><input type="button" value="계산3(함수-익명함수호출)" onclick="calc3()" class="btn btn-success mb-2"></div>
+    <div><input type="button" value="익명함수" onclick="mbc()" class="btn btn-success mb-2"></div>
   </p>
 </div>
 </body>
