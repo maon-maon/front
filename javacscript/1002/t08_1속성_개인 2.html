@@ -15,7 +15,16 @@
   </style>
   <script>
     'use strict';
-
+      
+    function fSize32() {
+      document.getElementById("demo").style.fontSize = '2em'
+      document.getElementById("demo").style.backgroundColor ='blue'
+      // 속성은 무조건 스타일
+    }// . . . : 으로 연결된건 : 체인기법 = font-size이렇게 쓰지 않음. 카멜로 씀
+    function fSize16() {
+      document.getElementById("demo").style.fontSize = '1em'
+      document.getElementById("demo").style.backgroundColor ='white'
+    }
     let sw = 0;
     function fSizeSw() {    
       if(sw == 0) {
@@ -29,16 +38,6 @@
         sw = 0;
       }
     }    
-      
-    function fSize32() {
-      document.getElementById("demo").style.fontSize = '2em'
-      document.getElementById("demo").style.backgroundColor ='blue'
-      // 속성은 무조건 스타일
-    }// . . . : 으로 연결된건 : 체인기법 = font-size이렇게 쓰지 않음. 카멜로 씀
-    function fSize16() {
-      document.getElementById("demo").style.fontSize = '1em'
-      document.getElementById("demo").style.backgroundColor ='white'
-    }
 
     function textOut() {
       demoText.innerHTML = "글자를 삽입합니다.";
@@ -61,6 +60,12 @@
       str += temp + '<br/>';
       demoText.innerHTML = str;
     }
+    
+      //글자복사의 메모리 제거안 됨. 페이지 새로고침이 최선
+      function textRefresh() {  
+      location.reload();
+    }
+
   </script>
 </head>
 <body>
@@ -79,6 +84,7 @@
       <button type="button" onclick="textOut()" class="btn btn-primary">글자 출력</button>
       <button type="button" onclick="textErase()" class="btn btn-primary">글자 삭제</button>
       <button type="button" onclick="textCopy()" class="btn btn-primary">글자 복사</button>
+      <button type="button" onclick="textRefresh()" class="btn btn-primary">새로고침</button>
     </div>
     <div class="mb-2">
       <button type="button" onclick="document.getElementById('demoImg').style.display='none'" class="btn btn-info">그림 감추기</button>      

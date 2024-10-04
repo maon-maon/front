@@ -10,7 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     'use strict';
-
+// 네임은 name.name.value
+// 아이디는 document.getElementById()
     function fCheck() {
       let hobbys ='';
       if(document.getElementById("hobby1").checked) hobbys += document.getElementById("hobby1").value + "/";
@@ -44,7 +45,7 @@
       <input type="checkbox" name="hobby" id="hobby7" value="탁구" /> 탁구&nbsp;
       <input type="checkbox" name="hobby" id="hobby8" value="독서" /> 독서&nbsp;
     </p>
-    <input type="button" value="출력" onclick="fCheck()" class="btn btn-success form-control"></input>
+    <input type="button" value="출력" onclick="fCheck()" class="btn btn-success form-control"/>
   </form>
   <hr>
   <div id="demo"></div>
