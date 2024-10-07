@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t02_객체.html</title>
+</head>
+<script>
+  'use strict';
+// <!-- 백에서는 이 부분을 사용하지 않음 프론트에서만 사용 -->
+
+  //객체 생성  : 
+  // 객체 생성 : new 연산자
+  let obj = new Object();
+    obj.name = '홍길동';
+    obj.age = 25;
+    obj.jumsu = [100,90,80];
+    obj.myFunc = function() {
+      console.log('성명 : ', this.name);
+    };
+    obj.myobj = {
+      tel : '010-1234-5678',
+      address : '청주시'
+    }
+
+    console.log('obj객체 : ', obj);
+  //클래스 개념이 나오지 이전엔 new 오브젝츠로 생성해서 obj.으로 사용함
+
+  //객체를 만들어서 값을 넣어서 쓸 수 있음
+</script>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t04_상속.html</title>
+  <script src="t04.js"></script>
+  <script>
+    'use strict';
+// <!-- 백에서는 이 부분을 사용하지 않음 프론트에서만 사용 -->
+
+  let member = new Member("김말숙",19,'빨강'); //익명은 아님 익명을function사용해야함
+    // console.log("member : ", member);
+    console.log("member.name : ", member.name);
+    console.log("member.age : ", member.age);
+    console.log("member.color : ", member.color);
+
+    //상속 : extends
+    class ChildMen extends Member {} //차일드는 멤버를 상속함//{}안에 정의하고 싶은 내용 적음
+
+    let childMen = new ChildMen('소나무',100,'black');
+    console.log("childMem : ", childMen);
+    console.log("childMem.name : ", childMen.name);
+    console.log("childMem.age : ", childMen.age);
+    console.log("childMem.color : ", childMen.color);
+    //하나의 객체 안에서는 되지만 외부에서 부르느건 안 됨?
+  </script>
+</head>
+<body>
+  <h2>상속</h2>
+</body>
+</html>
+
+<!-- 백에서는 이 부분을 사용하지 않음 프론트에서만 사용 -->
