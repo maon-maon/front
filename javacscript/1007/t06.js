@@ -3,7 +3,7 @@
 'use strict';
 //1.정규식만들기 2.사용하기
 function regCheck() {
-  const regEx1 = /atom/gm; //atom 문자열이 있으면 'true',없으면 'false'(여러줄에서의 처리)
+  const regEx1 = /atom/gm; //atom 문자열이 있으면 'true',없으면 'false'(여러줄에서의 처리) g=전체 m=여러줄
   const regEx2 = /atom/g; //atom 문자열이 있으면 'true',없으면 'false'(한줄에서의 처리)
   const regEx3 = /mbc|kbs|sbs/g; //mbc 또는 kbs 또는 sbs 를 포함하고 있느냐?
   const regEx4 = /홍길(동|순)/g; //'홍길동 또는 '홍길순'을 포함하고 있느냐?

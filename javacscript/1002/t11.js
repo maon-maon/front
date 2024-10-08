@@ -20,7 +20,7 @@ let text4 = '010-1234-5678';
 // charCodeAt() : 지정된 1문자의 아스키코드값을 출력한다.
 // replace() : 지정된 문자열로 치환한다.
 // replaceAll() : 지정된 문자열로 모든 값을 찾아서 모두 치환한다.
-// slice(a,b) : a번쨰 위치부터 b번째 위치 앞의 문자값을 추출한다.
+// slice(a,b) : a번쨰 위치부터 b번째 위치 앞의 문자값을 추출한다. 음수 붙이면 뒤에서 자리 찾음
 // split(a) : a문자를 기준으로 분리시켜서 배열로 저장한다.
 
 let res = '', cnt=0;
@@ -49,7 +49,8 @@ res += ++cnt + " : " + text1.replace('ABC','opq') + "<br/>";
 res += ++cnt + " : " + text2.replace('ABC','opq') + "<br/>";
 res += ++cnt + " : " + text2.replaceAll('ABC','opq') + "<br/>";
 res += ++cnt + " : " + text1.slice(5) + "<br/>";
-res += ++cnt + " : " + text1.slice(5,8) + "<br/>";
+res += ++cnt + " :51 " + text1.slice(5,8) + "<br/>";
+res += ++cnt + " :52 " + text1.slice(-2) + "<br/>"; //음수 붙이면 뒤에서 자리 찾음
 res += ++cnt + " : " + text1.split('ABC')[0] + "<br/>";
 res += ++cnt + " : " + text1.split('ABC')[1] + "<br/>";
 res += ++cnt + " : " + text4.split('-')[0] + "<br/>";
